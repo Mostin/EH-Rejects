@@ -17,6 +17,5 @@ for plainTextChar in plainText:#iterates through the plain text
         cipherCharIndexValue = baseAlphabet.index(keyList[keyIncrement]) + baseAlphabet.index(plainTextChar)#Adds the base alphabets index value of the key and the plain text char
         while cipherCharIndexValue > 25:
             cipherCharIndexValue = cipherCharIndexValue - 26#makes the addition value under 26 as to not go out of range of base alphabet tuple
-        completeCipherText.append(baseAlphabet[cipherCharIndexValue])#appends the ciphertext character to the completeCipherText variable. The character is the index of the key + index of the plainTextChar from baseAlphabet
+        completedCipher.append(baseAlphabet[cipherCharIndexValue])#appends the ciphertext character to the completedCipher variable. The character is the index of the key + index of the plainTextChar from baseAlphabet
 print ("Your encrypted plain text is:", completedCipher)
-
