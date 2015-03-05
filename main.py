@@ -1,15 +1,13 @@
 # Vigenere Cipher (Polyalphabetic Substitution Cipher)
-# http://inventwithpython.com/hacking (BSD Licensed)
 
 import pyperclip
 
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 def main():
-    # This text can be copy/pasted from http://invpy.com/vigenereCipher.py
-    myMessage = raw_input("Please enter your string to be decrypted")
-    myKey = 'ASIMOV'
-    myMode = 'encrypt' # set to 'encrypt' or 'decrypt'
+    myMessage = raw_input("Please enter your string to be decrypted: ")
+    myKey = 'ehrejects'
+    myMode = raw_input("What mode do you want? Type encrypt or decrypt: "
 
     if myMode == 'encrypt':
         translated = encryptMessage(myKey, myMessage)
