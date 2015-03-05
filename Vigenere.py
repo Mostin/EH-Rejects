@@ -2,7 +2,7 @@
 baseAlphabet = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
 print ("Welcome to a Vigenere Cipher encrypter. You will first be asked to enter the plain text to be encrypted and then the key you would like to use in the encryption process. The resulting text will be the cipher text.")
 plainText = raw_input("Please enter the plain text: ")
-key = raw_input("Please enter the key: ")
+key = "ehrejects"
 keyList = []
 keyLength = 0
 while keyLength < len(plainText):
@@ -10,7 +10,7 @@ while keyLength < len(plainText):
         if keyLength < len(plainText):
             keyList.append(str(char))
             keyLength = keyLength + 1
-completeCipherText = [] #The variable each processed letter is appended to
+completedCipher = [] #The variable each processed letter is appended to
 cipherCharIndexValue = 0#This is the value used to temporaily store the ciphertext character during the iteration
 keyIncrement = 0
 for plainTextChar in plainText:#iterates through the plain text
@@ -18,5 +18,5 @@ for plainTextChar in plainText:#iterates through the plain text
         while cipherCharIndexValue > 25:
             cipherCharIndexValue = cipherCharIndexValue - 26#makes the addition value under 26 as to not go out of range of base alphabet tuple
         completeCipherText.append(baseAlphabet[cipherCharIndexValue])#appends the ciphertext character to the completeCipherText variable. The character is the index of the key + index of the plainTextChar from baseAlphabet
-print ("Your encrypted plain text is:", completeCipherText)
+print ("Your encrypted plain text is:", completedCipher)
 
