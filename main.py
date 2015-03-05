@@ -7,7 +7,7 @@ LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 def main():
     myMessage = raw_input("Please enter your string to be decrypted: ")
     myKey = 'ehrejects'
-    myMode = raw_input("What mode do you want? Type encrypt or decrypt: "
+    myMode = raw_input("What mode do you want? Type encrypt or decrypt: ")
 
     if myMode == 'encrypt':
         translated = encryptMessage(myKey, myMessage)
