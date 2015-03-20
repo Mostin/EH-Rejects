@@ -13,7 +13,7 @@ def main():
 	replay = True
 	repeat = True
 	while repeat == True:
-		ran_q = random.randrange(1, 20)
+		ran_q = random.randrange(1, 5)
 		count += 1
 		if count == 1:
 			a = ran_q
@@ -25,37 +25,53 @@ def main():
 			d = ran_q
 		if count == 5:
 			e = ran_q
-		if count == 6:
-			f = ran_q
-		if count == 7:
-			g = ran_q
-		if count == 8:
-			h = ran_q
-		if count == 9:
-			i = ran_q
-		if count == 10:
-			j = ran_q
-		if count == 11:
-			k = ran_q
-		if count == 12:
-			l = ran_q
-		if count == 13:
-			m = ran_q
-		if count == 14:
-			n = ran_q
-		if count == 15:
-			o = ran_q
-		if (ran_q != a and ran_q != b and ran_q != c and ran_q != d and ran_q != e and ran_q != f and ran_q != g and ran_q != h and ran_q != i and ran_q != j and ran_q != k and ran_q != l and ran_q != m and ran_q != n and ran_q != o):
-			question_num = 1
-			repeat = False
+		if (ran_q != a and ran_q != b and ran_q != c and ran_q != d and ran_q != e):
+			question_num = ran_q
+			repeat = True
 			print(question_num)
 			if question_num == 1:
 				answer = "David Cameron"
-				guess = input("Who is a wanker? ")
+				guess = input("Using our tool, decrypt this cipher 'Hhmmm Gcfwvve' ")
 				progress += 1
 				if guess == answer:
 					correct += 1
 					print("Correct well done %s" % name)
 				else:
-					print("wrong fuckface")
+					print("Unlucky try again.")
+			if question_num == 2:
+				answer = "Gvmiwxtr"
+				guess = input("Using our tool, encrypt the word 'Coventry' and enter your output as the answer.")
+				progress += 1
+				if guess == answer:
+					correct += 1
+					print("Correct well done %s" % name)
+				else:
+					print("Unlucky try again")
+			if question_num == 3:
+				answer = "gyptcsikstop wdmvx"
+				guess = input("Encrypt the title of our online blog http://ehrejects.wordpress.com and enter your output as the answer.")
+				progress += 1
+				if guess == answer:
+					correct += 1
+					print("Correct well done %s" % name)
+				else:
+					print("Unlucky try again")
+			if question_num == 4:
+				answer = "One-time pad"
+				guess = input("Which type of encryption is virtually impossible to break if used correctly?")
+				progress += 1
+				if guess == answer:
+					correct += 1
+					print("Correct well done %s" % name)
+				else:
+					print("Unlucky try again")
+			if question_num == 5:
+				answer = "Bacon and egg Sandwich"
+				guess = input("What did Jack have for breakfast?")
+				progress += 1
+				if guess == answer:
+					correct += 1
+					print("Correct well done %s" % name)
+				else:
+					print("Unlucky try again")
 main()
